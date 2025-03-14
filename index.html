@@ -9,19 +9,53 @@
 <body>
     <div class="container">
         <h1>Калькулятор вероятности блэкджека</h1>
-        <form id="blackjack-form">
-            <label for="player-cards">Ваши карты:</label>
-            <input type="text" id="player-cards" placeholder="Пример: A, 10" required>
 
-            <label for="dealer-cards">Карты дилера:</label>
-            <input type="text" id="dealer-cards" placeholder="Пример: 7" required>
+        <!-- Карты дилера -->
+        <div class="cards-section">
+            <h2>Карты дилера:</h2>
+            <div id="dealer-cards" class="cards-row">
+                <!-- Кнопки для карт дилера -->
+                <button data-card="2">2</button>
+                <button data-card="3">3</button>
+                <button data-card="4">4</button>
+                <button data-card="5">5</button>
+                <button data-card="6">6</button>
+                <button data-card="7">7</button>
+                <button data-card="8">8</button>
+                <button data-card="9">9</button>
+                <button data-card="10">10</button>
+                <button data-card="J">J</button>
+                <button data-card="Q">Q</button>
+                <button data-card="K">K</button>
+                <button data-card="A">A</button>
+            </div>
+        </div>
 
-            <label for="deck-count">Количество колод:</label>
-            <input type="number" id="deck-count" value="1" min="1" required>
+        <!-- Карты игрока -->
+        <div class="cards-section">
+            <h2>Ваши карты:</h2>
+            <div id="player-cards" class="cards-row">
+                <!-- Кнопки для карт игрока -->
+                <button data-card="2">2</button>
+                <button data-card="3">3</button>
+                <button data-card="4">4</button>
+                <button data-card="5">5</button>
+                <button data-card="6">6</button>
+                <button data-card="7">7</button>
+                <button data-card="8">8</button>
+                <button data-card="9">9</button>
+                <button data-card="10">10</button>
+                <button data-card="J">J</button>
+                <button data-card="Q">Q</button>
+                <button data-card="K">K</button>
+                <button data-card="A">A</button>
+            </div>
+        </div>
 
-            <button type="submit">Рассчитать</button>
-        </form>
+        <!-- Кнопка расчета -->
+        <button id="calculate-btn">Рассчитать вероятность</button>
 
+        <!-- Результат -->
         <div id="result"></div>
     </div>
 
